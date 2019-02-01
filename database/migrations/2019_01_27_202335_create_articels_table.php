@@ -22,6 +22,7 @@ class CreateArticelsTable extends Migration
             $table->integer('category_id')->unsigned();
             $table->foreign('category_id')->references('id')->on('categories');
             $table->tinyInteger('published')->comment('0:no,1:yes');
+            $table->string('img_url');
             $table->timestamps();
         });
     }

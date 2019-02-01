@@ -37,6 +37,21 @@
                                     </span>
                                 @endif
                             </div>
+                        </div> 
+                        <div class="form-group row">
+                            <label for="user_type" class="col-md-4 col-form-label text-md-right">{{ __('User Type') }}</label>
+
+                            <div class="col-md-6">
+                                <select name="user_type"  class="form-control {{ $errors->has('user_type') ? ' is-invalid' : '' }}" required>
+                                    <option value="1">Content-Creator</option>
+                                    <option value="0">Admin</option>
+                                </select>
+                                @if ($errors->has('user_type'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('user_type') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
                         </div>
 
                         <div class="form-group row">
